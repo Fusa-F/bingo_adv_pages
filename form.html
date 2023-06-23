@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./static/css/common.css" type="text/css">
+
+  <title>「さがしてビンゴ！」お問い合わせフォーム</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 1em;
+    }
+  </style>
+</head>
+
+<script type="text/javascript">
+  let submitted = false;
+</script>
+
+<iframe name="to_success" id="to_success" style="display: none"
+  onload="if(submitted){window.location='./thanks.html';}">
+</iframe>
+
+<body>
+  <form id="contact"
+    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfOjgOIp-k8GDyz_IO4wnKzGK2_kobV_gbYvkpfjhQmy-5OKQ/formResponse"
+    method="POST" target="to_success" onsubmit="submitted=true;">
+    <div class="container">
+      <div class="header">
+        <h2>「さがしてビンゴ！」お問い合わせフォーム</h2>
+        <p>いつもご利用いただき誠にありがとうございます。<br />
+          <br />
+          このお問い合わせフォームでは、ユーザーの皆さまからのご質問やご要望、バグや不具合の報告を受け付けております。<br />
+          <br />
+          メールアドレスのご登録などは不要ですので、何かございましたらお気軽にご連絡くださいませ。<br />
+          暖かい言葉をお待ちしております。<br />
+          <br />
+          以下にお問い合わせ内容をご記入の上、送信ください。
+        </p>
+      </div>
+      <div class="body">
+
+
+        <div class="form-group">
+          <label>1. お問い合わせ種別<span style="color: red">（必須）</span></label>
+          <div class="radio-container">
+            <label class="radio-details" for="rating1"></label>
+            <input class="radio-detail" type="radio" name="entry.2137530244" aria-label="1" aria-pointset="1" value="質問"
+              id="rating1" required />質問
+          </div>
+
+          <div class="radio-container">
+            <label class="radio-details" for="rating2"></label>
+            <input class="radio-detail" type="radio" name="entry.2137530244" aria-label="2" aria-pointset="2" value="要望"
+              id="rating2" />要望
+          </div>
+
+          <div class="radio-container">
+            <label class="radio-details" for="rating3"></label>
+            <input class="radio-detail" type="radio" name="entry.2137530244" aria-label="3" aria-pointset="3"
+              value="バグ・不具合報告" id="rating3" />バグ・不具合報告
+          </div>
+
+          <!-- <div class="radio-container">
+            <label class="radio-details" for="rating3"></label>
+            <input class="radio-detail" type="radio" name="entry.295544369" aria-label="3" aria-pointset="3"
+              value="__other_option__" id="rating3" />その他
+            <br />
+            <input type="text" name="entry.295544369.other_option_response" value="" />
+          </div> -->
+        </div>
+
+        <div class="form-group">
+          <label for="content">2. お問い合わせ内容<span style="color: red">（必須）</span>：</label><br>
+          <textarea id="content" type="text" name="entry.405240937" placeholder="回答を入力する" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="content">3. （1.で「バグ・不具合報告」を選択した方） <br />
+            ご利用の端末の情報（機種名やOSのバージョン）をご記入ください。：
+          </label><br>
+          <p style="font-size: 14px;">
+            iPhoneの確認方法：<br />
+            デバイスにインストールされているソフトウェアのバージョンを確認するには、「設定」アプリ >「一般」の順に選択し、「情報」をタップします。
+            <br />
+            <br />
+            Androidの確認方法：<br />
+            スマートフォンの設定アプリを開きます。
+            画面下部の [デバイス情報] 次の操作 [Android バージョン] をタップします。
+            [Android バージョン]、[Android セキュリティ アップデート]、[ビルド番号] を確認します。
+          </p>
+          <textarea id="content" type="text" name="entry.1045554544" placeholder="例）iPhone14 iOS 16.4"></textarea>
+        </div>
+
+        <div style="text-align: center;">
+          <button id="submit" type="submit">
+            送信する
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
